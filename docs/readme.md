@@ -100,13 +100,13 @@ To run background monitoring:
     --------------------+-----------------------------------
     Module              | Description
     --------------------+-----------------------------------
-    MarketConnector 	| Real-time price updates
+    MarketConnector 	  | Real-time price updates
     --------------------+-----------------------------------
-    YahooConnector  	| Stock fundamentals/price data
+    YahooConnector  	  | Stock fundamentals/price data
     --------------------+-----------------------------------
     GlassnodeConnector	| Crypto on-chain metrics
     --------------------+-----------------------------------
-    SECConnector	    | Automated 10-K/Q filings retrieval
+    SECConnector	      | Automated 10-K/Q filings retrieval
     --------------------+-----------------------------------
 ```
 
@@ -114,9 +114,9 @@ To run background monitoring:
 ```code
     Engine	                | Functionality
     ------------------------+--------------------------------
-    QuantitativeAnalysis	| DCF, relative valuation models
+    QuantitativeAnalysis	  | DCF, relative valuation models
     ------------------------+--------------------------------
-    ForensicAnalyzer	    | Accounting anomaly detection
+    ForensicAnalyzer	      | Accounting anomaly detection
     ------------------------+--------------------------------
     RiskEngine	            | CVaR, portfolio optimization
     ------------------------+--------------------------------
