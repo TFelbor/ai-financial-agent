@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html class="dark-theme">
+<head>
+    <title>Financial Analysis Dashboard</title>
+    <link href="/static/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="/static/js/bootstrap.bundle.min.js"></script>
+    <script src="/static/script.js"></script>
+    <style>
+        :root {
+            --dark-bg: #1a1a1a; /* Darker background to match graph */
+            --darker-bg: #121212;
+            --card-bg: #222222; /* Slightly lighter than graph background */
+            --border-color: #333;
+            --text-primary: #e0e0e0;
+            --text-secondary: #aaaaaa;
+            --accent-primary: #7e57c2; /* Purple */
+            --accent-secondary: #5c6bc0; /* Indigo */
+            --accent-success: #00c853; /* Green */
+            --accent-warning: #ffab00; /* Amber */
+            --accent-danger: #ff5252; /* Red */
+            --accent-info: #00b0ff; /* Light Blue */
+        }
+
+        html.dark-theme,
+        html.dark-theme body {
+            background-color: var(--dark-bg) !important;
+            color: var(--text-primary) !important;
+        }
+
+        .dark-theme .container,
+        .dark-theme .row,
+        .dark-theme .col,
+        .dark-theme .col-md-8,
+        .dark-theme .col-md-6,
+        .dark-theme .col-md-4 {
+            background-color: var(--dark-bg) !important;
+        }
+
+        h1 {
+            color: var(--text-primary);
+            font-size: 2.2em;
+            font-weight: 600;
+        }
+
+        h2 {
+            color: var(--accent-primary);
+            font-size: 1.8em;
+            font-weight: 600;
+        }
+
+        h3 {
+            color: var(--text-primary);
+            font-size: 1.5em;
+        }
+
+        .chart-container {
+            height: 400px;
+            margin: 20px 0;
+            background-color: #1a1a1a; /* Match exactly with the graph background */
+            border-radius: 8px;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+        }
+
+        .metric-box {
+            padding: 20px;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            margin-bottom: 20px;
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            transition: all 0.2s ease;
+        }
+
+        .metric-box:hover {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border-color: var(--accent-secondary);
+        }
+
+        .metric-label {
+            font-size: 1.25em;
+            color: var(--text-secondary);
+            margin-bottom: 12px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            font-weight: 600;
+        }
+
+        .metric-value {
+            font-size: 1.1em;
+            font-weight: normal;
+            color: var(--text-primary);
+            padding: 8px 12px;
+            background-color: var(--darker-bg);
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+
+        .technical-indicators .metric-value {
+            font-weight: normal;
+            font-size: 1em;
+            padding: 10px 15px;
+            background-color: var(--darker-bg);
+        }
+
+        .technical-indicators .indicator-desc {
+            margin-bottom: 10px;
+            margin-top: 10px;
+            line-height: 1.6;
+        }
+
+        .technical-indicators .indicator-item {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .indicator-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .indicator-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .indicator-row {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 8px;
+        }
+
+        .indicator-name {
+            font-weight: 600;
+            font-size: 1.3em;
+            color: var(--accent-secondary);
+            display: inline-block;
+            min-width: 100px;
+            margin-right: 15px;
+        }
+
+        .indicator-value {
+            font-weight: normal;
+            font-size: 1em;
+            margin-left: 5px;
+            color: var(--text-primary);
+            background-color: var(--darker-bg);
+            padding: 4px 8px;
+            border-radius: 4px;
+            display: inline-block;
+            min-width: 80px;
+            text-align: right;
+        }
+
+        .indicator-desc {
+            font-size: 0.95em;
+            color: var(--text-secondary);
+            margin-top: 10px;
+            line-height: 1.6;
+            padding: 8px 12px;
+            background-color: rgba(30, 30, 30, 0.5);
+            border-radius: 4px;
+            border-left: 3px solid var(--accent-secondary);
+        }
+
+        .rating-box {
+            background-color: var(--darker-bg);
+            text-align: center;
+            border: 1px solid var(--border-color);
+        }
+
+        .rating-value {
+            font-size: 1.2em;
+            font-weight: bold;
+            text-align: center;
+            margin: 10px 0;
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            letter-spacing: 0.5px;
+        }
+
+        .rating-strong-buy {
+            color: white;
+            background-color: var(--accent-success);
+        }
+
+        .rating-buy {
+            color: white;
+            background-color: var(--accent-info);
+        }
+
+        .rating-neutral {
+            color: #212529;
+            background-color: var(--accent-warning);
+        }
+
+        .rating-sell {
+            color: white;
+            background-color: #ff9800; /* Orange */
+        }
+
+        .rating-strong-sell {
+            color: white;
+            background-color: var(--accent-danger);
+        }
+
+        .rating-basis {
+            font-size: 0.85em;
+            color: var(--text-secondary);
+            text-align: center;
+            font-style: italic;
+            margin-top: 5px;
+        }
+
+        .dark-theme .form-control,
+        .dark-theme .form-control-lg {
+            background-color: var(--card-bg) !important;
+            border-color: var(--border-color) !important;
+            color: var(--text-primary) !important;
+        }
+
+        .dark-theme .form-control:focus,
+        .dark-theme .form-control-lg:focus {
+            background-color: var(--card-bg) !important;
+            color: var(--text-primary) !important;
+            border-color: var(--accent-primary) !important;
+            box-shadow: 0 0 0 0.25rem rgba(126, 87, 194, 0.25) !important;
+        }
+
+        .dark-theme .btn-primary,
+        .dark-theme .btn-primary.btn-lg {
+            background-color: var(--accent-primary) !important;
+            border-color: var(--accent-primary) !important;
+            color: white !important;
+        }
+
+        .dark-theme .btn-primary:hover,
+        .dark-theme .btn-primary.btn-lg:hover {
+            background-color: var(--accent-secondary) !important;
+            border-color: var(--accent-secondary) !important;
+        }
+
+        .dark-theme .alert-info {
+            background-color: rgba(0, 176, 255, 0.15) !important;
+            border-color: rgba(0, 176, 255, 0.3) !important;
+            color: var(--text-primary) !important;
+        }
+
+        .dark-theme .alert-danger {
+            background-color: rgba(255, 82, 82, 0.15) !important;
+            border-color: rgba(255, 82, 82, 0.3) !important;
+            color: var(--text-primary) !important;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-5 pb-5">
+        <h1 class="mb-4">Financial Analysis Dashboard</h1>
+        <div class="row mb-5">
+            <div class="col">
+                <input type="text" id="tickerList" class="form-control form-control-lg"
+                       placeholder="Enter tickers (e.g., AAPL,BTC,ETH)">
+            </div>
+            <div class="col-auto">
+                <button onclick="startAnalysis()" class="btn btn-primary btn-lg">Analyze</button>
+            </div>
+        </div>
+        <div id="status" class="alert d-none mb-4"></div>
+        <div id="results" class="mb-5"></div>
+    </div>
+</body>
+</html>

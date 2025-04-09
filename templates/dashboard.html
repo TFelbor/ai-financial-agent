@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Financial Analysis Dashboard</title>
+    <!-- Update Bootstrap to local file or newer CDN -->
+    <link href="static/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Update Plotly to specific version -->
+    <script src="https://cdn.plot.ly/plotly-2.24.1.min.js"></script>
+    <script src="static/js/bootstrap.bundle.min.js"></script>
+    <style>
+        .chart-container {
+            height: 400px;
+            margin: 20px 0;
+        }
+        .metric-box {
+            padding: 15px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .metric-label {
+            font-size: 0.9em;
+            color: #666;
+        }
+        .metric-value {
+            font-size: 1.2em;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container mt-4">
+        <h1>Financial Analysis Dashboard</h1>
+        <div class="row mb-4">
+            <div class="col">
+                <input type="text" id="tickerList" class="form-control" 
+                       placeholder="Enter tickers (e.g., AAPL,BTC,ETH)">
+            </div>
+            <div class="col-auto">
+                <button onclick="startAnalysis()" class="btn btn-primary">Analyze</button>
+            </div>
+        </div>
+        <div id="status" class="alert d-none"></div>
+        <div id="results"></div>
+    </div>
+    
+    <script src="static/script.js"></script>
+</body>
+</html>
