@@ -4,10 +4,10 @@
 ![License](https://img.shields.io/badge/license-MIT-green)
 
 ## Dashboard Preview
-<img src="data/outputs/website_preview_1.png" width="300" />
-![Preview 1](data/outputs/website_preview_1)
-![Preview_2](data/outputs/website_preview_2)
-![Preview_3](data/outputs/website_preview_3)
+
+![website_preview_1](https://github.com/user-attachments/assets/469ed3bf-ede8-4ac6-a928-27d654389a5d)
+![website_preview_2](https://github.com/user-attachments/assets/ebf79b0c-6e65-4fd5-95a1-e92082726a55)
+![website_preview_3](https://github.com/user-attachments/assets/4bd60560-e2b8-4036-9a76-41bf7dca6464)
 
 An advanced quantitative analysis platform combining machine learning, forensic accounting, and real-time market monitoring for stocks and cryptocurrencies.
 
