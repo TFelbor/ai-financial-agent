@@ -52,10 +52,10 @@ An advanced quantitative analysis platform combining machine learning, forensic 
 ```bash
     cp config/secrets.env.example config/secrets.env
 ```
-    -> Edit config/secrets.env with your:
-        - Yahoo Finance API token
-        - Glassnode API key
-        - SEC EDGAR API key
+  -> Edit config/secrets.env with your:
+  - Yahoo Finance API token
+  - Glassnode API key
+  - SEC EDGAR API key
 
 ## Project Structure
 
