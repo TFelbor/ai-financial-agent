@@ -112,13 +112,13 @@ SECConnector	      | Automated 10-K/Q filings retrieval
 
 ### Analytics Modules
 ```code
-Engine	                | Functionality
+Engine                  | Functionality
 ------------------------+--------------------------------
-QuantitativeAnalysis	  | DCF, relative valuation models
+QuantitativeAnalysis    | DCF, relative valuation models
 ------------------------+--------------------------------
-ForensicAnalyzer	      | Accounting anomaly detection
+ForensicAnalyzer        | Accounting anomaly detection
 ------------------------+--------------------------------
-RiskEngine	            | CVaR, portfolio optimization
+RiskEngine              | CVaR, portfolio optimization
 ------------------------+--------------------------------
 ```
 
