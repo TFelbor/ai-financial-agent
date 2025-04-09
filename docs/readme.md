@@ -97,29 +97,29 @@ To run background monitoring:
 
 ### Data Connectors
 ```code
-    --------------------+-----------------------------------
-    Module              | Description
-    --------------------+-----------------------------------
-    MarketConnector 	  | Real-time price updates
-    --------------------+-----------------------------------
-    YahooConnector  	  | Stock fundamentals/price data
-    --------------------+-----------------------------------
-    GlassnodeConnector	| Crypto on-chain metrics
-    --------------------+-----------------------------------
-    SECConnector	      | Automated 10-K/Q filings retrieval
-    --------------------+-----------------------------------
+--------------------+-----------------------------------
+Module              | Description
+--------------------+-----------------------------------
+MarketConnector 	  | Real-time price updates
+--------------------+-----------------------------------
+YahooConnector  	  | Stock fundamentals/price data
+--------------------+-----------------------------------
+GlassnodeConnector	| Crypto on-chain metrics
+--------------------+-----------------------------------
+SECConnector	      | Automated 10-K/Q filings retrieval
+--------------------+-----------------------------------
 ```
 
 ### Analytics Modules
 ```code
-    Engine	                | Functionality
-    ------------------------+--------------------------------
-    QuantitativeAnalysis	  | DCF, relative valuation models
-    ------------------------+--------------------------------
-    ForensicAnalyzer	      | Accounting anomaly detection
-    ------------------------+--------------------------------
-    RiskEngine	            | CVaR, portfolio optimization
-    ------------------------+--------------------------------
+Engine	                | Functionality
+------------------------+--------------------------------
+QuantitativeAnalysis	  | DCF, relative valuation models
+------------------------+--------------------------------
+ForensicAnalyzer	      | Accounting anomaly detection
+------------------------+--------------------------------
+RiskEngine	            | CVaR, portfolio optimization
+------------------------+--------------------------------
 ```
 
 ## Documentation
