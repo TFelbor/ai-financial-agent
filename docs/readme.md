@@ -100,7 +100,7 @@ To run background monitoring:
 --------------------+-----------------------------------
 Module              | Description
 --------------------+-----------------------------------
-MarketConnector    | Real-time price updates
+MarketConnector     | Real-time price updates
 --------------------+-----------------------------------
 YahooConnector      | Stock fundamentals/price data
 --------------------+-----------------------------------
