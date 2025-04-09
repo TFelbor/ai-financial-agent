@@ -5,7 +5,7 @@
 
 ## Dashboard Preview
 <img src="data/outputs/website_preview_1.png" width="300" />
-![Preview_1](data/outputs/website_preview_1.png)
+![ ](data/outputs/website_preview_1.png)
 ![Preview_2](data/outputs/website_preview_2.png)
 ![Preview_3](data/outputs/website_preview_3.png)
 
