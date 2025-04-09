@@ -96,7 +96,7 @@ To run background monitoring:
 ## Key Components
 
 ### Data Connectors
-```code
+```
 --------------------+-----------------------------------
 Module              | Description
 --------------------+-----------------------------------
@@ -111,7 +111,7 @@ SECConnector	      | Automated 10-K/Q filings retrieval
 ```
 
 ### Analytics Modules
-```code
+```
 Engine                  | Functionality
 ------------------------+--------------------------------
 QuantitativeAnalysis    | DCF, relative valuation models
