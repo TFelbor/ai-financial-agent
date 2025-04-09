@@ -3,6 +3,11 @@
 ![Python Version](https://img.shields.io/badge/python-3.12%2B-blue)
 ![License](https://img.shields.io/badge/license-MIT-green)
 
+## Dashboard Preview
+![Preview_1](data/outputs/website_preview_1.png)
+![Preview_2](data/outputs/website_preview_2.png)
+![Preview_3](data/outputs/website_preview_3.png)
+
 An advanced quantitative analysis platform combining machine learning, forensic accounting, and real-time market monitoring for stocks and cryptocurrencies.
 
 ## Features
