@@ -8,7 +8,7 @@ An advanced quantitative analysis platform combining machine learning, forensic 
 ## Features
 
 - **Multi-Asset Coverage**: Analyze traditional securities & cryptoassets
-- **Automated Alerts**: Trigger-based notifications for market anomalies
+- **Automated Alerts**: Trigger-based notifications for market anomalies (development phase)
 - **Forensic Accounting**: Benford's Law analysis for financial statements
 - **Quantitative Models**: 
   - Monte Carlo DCF valuations
