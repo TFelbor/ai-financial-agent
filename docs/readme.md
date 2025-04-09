@@ -75,14 +75,21 @@ An advanced quantitative analysis platform combining machine learning, forensic 
 ## Usage
     
 ### Running the Dashboard
+
+For development (with auto-reload):
 ```bash
-    python src/api/run.py
+    python -m src.api.run
 ```
     -> Access the web interface at: http://localhost:8000
 
+For production:
+```bash
+    uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --workers 4
+```
+
 ### Command Line Analysis
 ```bash
-    python src/main.py --ticker AAPL
+    python -m src.main --ticker AAPL
 ```
 
 ### Scheduled Tasks
