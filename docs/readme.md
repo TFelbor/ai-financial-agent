@@ -141,9 +141,24 @@ RiskEngine              | CVaR, portfolio optimization
 - Analysis Methodology   -> methodology.md
 - Troubleshooting        -> troubleshooting.md
 
-Example Reports
-Equity Analysis Sample
-Crypto Dashboard
 
-License
+## Future Implementations
+
+- AI Agents      :  AI hedgefund agents for better evals
+- More API       :  more diverse crypto markets so more coins can be analyzed
+- Crypto         :  develop more advanced valuation metrics & procedures to analyze crypto assets
+- Advising       :  the final decision summary that goes over the findings and comes up with a final decision
+- PDF            :  an option to export the results of analysis
+- Visuals        :  toogle tabs for each of the tickers analyzed
+- Eval Metrics   :  option for the users to pick how they want their securities analyzed
+- Cmnd Line      :  fix command line functionality
+- Visuals        :  ‘Analysis Complete’ label after successfully rendering the outputs
+- Eval Metrics   :  calculations of crypto market supply to display the correct data
+- Cmnd Line      :  closing the server other way than control + c
+- Chat           :  add ai assistant chat (use grok for API)
+- Process        :  make the process of evaluation more experimental instead of deterministic (focus more on collecting data & mitigating the errors)
+
+
+## License
 MIT License. See LICENSE for details.
+
