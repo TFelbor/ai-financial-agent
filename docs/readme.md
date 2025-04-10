@@ -145,7 +145,7 @@ RiskEngine              | CVaR, portfolio optimization
 ## Future Implementations
 
 - *AI Agents* - AI hedgefund agents for better evals
-- API* - more diverse crypto markets so more coins can be analyzed
+- *API* - more diverse crypto markets so more coins can be analyzed
 - *Crypto* - develop more advanced valuation metrics & procedures to analyze crypto assets
 - *Advising* - the final decision summary that goes over the findings and comes up with a final decision
 - *PDF* - an option to export the results of analysis
