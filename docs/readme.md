@@ -27,36 +27,36 @@ An advanced quantitative analysis platform combining machine learning, forensic 
 
 1. **MacOS**: Install Homebrew (if not installed):
 ```bash
-   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 ```
 
 2. Install TA-Lib System Library:
 ```bash 
-    brew install ta-lib
+brew install ta-lib
 ```
 
 ### Setup
 
 1. Clone the repository:
 ```bash
-    git clone https://github.com/yourusername/ai-financial-agent.git
-    cd ai-financial-agent
+git clone https://github.com/yourusername/ai-financial-agent.git
+cd ai-financial-agent
 ```
 
 2. Create and activate virtual environment:
 ```bash
-    python -m venv venv
-    source venv/bin/activate  # Linux/Mac
-    venv\Scripts\activate    # Windows
+python -m venv venv
+source venv/bin/activate  # Linux/Mac
+venv\Scripts\activate    # Windows
 ```
 3. Install dependencies:
 ```bash
-    pip install -r requirements.txt
+pip install -r requirements.txt
 ```
 
 4. Set up API keys:
 ```bash
-    cp config/secrets.env.example config/secrets.env
+cp config/secrets.env.example config/secrets.env
 ```
   -> Edit config/secrets.env with your:
   - Yahoo Finance API token
@@ -66,16 +66,16 @@ An advanced quantitative analysis platform combining machine learning, forensic 
 ## Project Structure
 
 ```code
-    financial_agent/
-    ├── data/               # Cached data and outputs
-    ├── static/             # CSS/JS assets
-    ├── templates/          # HTML templates
-    ├── src/
-    │   ├── analytics/      # Core analysis engines
-    │   ├── api/            # FastAPI endpoints
-    │   ├── config/         # Configuration
-    │   └── data_connectors # Market data sources
-    └── tests/              # Unit tests
+financial_agent/
+├── data/               # Cached data and outputs
+├── static/             # CSS/JS assets
+├── templates/          # HTML templates
+├── src/
+│   ├── analytics/      # Core analysis engines
+│   ├── api/            # FastAPI endpoints
+│   ├── config/         # Configuration
+│   └── data_connectors # Market data sources
+└── tests/              # Unit tests
 ```
     
 ## Usage
@@ -84,26 +84,26 @@ An advanced quantitative analysis platform combining machine learning, forensic 
 
 For development (with auto-reload):
 ```bash
-    python -m src.api.run
+python -m src.api.run
 ```
     -> Access the web interface at: http://localhost:8000
 
 For production:
 ```bash
-    uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --workers 4
+uvicorn src.api.main:app --host 0.0.0.0 --port 8000 --workers 4
 ```
 
 ### Command Line Analysis
 ```bash
-    python -m src.main --ticker AAPL
+python -m src.main --ticker AAPL
 ```
 
 ### Scheduled Tasks
 To run background monitoring:
 ```python
-    from src.analytics.trigger_engine import MarketTrigger
-    trigger = MarketTrigger()
-    trigger.start()
+from src.analytics.trigger_engine import MarketTrigger
+trigger = MarketTrigger()
+trigger.start()
 ```
 
 ## Key Components
