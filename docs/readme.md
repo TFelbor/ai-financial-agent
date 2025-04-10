@@ -157,6 +157,7 @@ RiskEngine              | CVaR, portfolio optimization
 - *Cmnd Line* - closing the server other way than control + c
 - *Chat* - add ai assistant chat (use grok for API)
 - *Process* - make the process of evaluation more experimental instead of deterministic (focus more on collecting data & mitigating the errors)
+- *Deployment* - leverage together.ai for better deployement & results
 
 
 ## License
