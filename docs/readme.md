@@ -155,7 +155,7 @@ RiskEngine              | CVaR, portfolio optimization
 - *Visuals* - ‘Analysis Complete’ label after successfully rendering the outputs
 - *Eval Metrics* - calculations of crypto market supply to display the correct data
 - *Cmnd Line* - closing the server other way than control + c
-- *Chat* - add ai assistant chat (use grok for API)
+- *Chat* - add ai assistant chat
 - *Process* - make the process of evaluation more experimental instead of deterministic (focus more on collecting data & mitigating the errors)
 - *Deployment* - leverage together.ai for better deployement & results
 
