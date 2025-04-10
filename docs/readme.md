@@ -9,7 +9,7 @@
 
 ![website_preview_2](https://github.com/user-attachments/assets/ebf79b0c-6e65-4fd5-95a1-e92082726a55)
 
-An advanced quantitative analysis platform combining machine learning, forensic accounting, and real-time market monitoring for stocks and cryptocurrencies.
+*An advanced quantitative analysis platform combining machine learning, forensic accounting, and real-time market monitoring for stocks and cryptocurrencies.*
 
 ## Features
 
@@ -144,19 +144,19 @@ RiskEngine              | CVaR, portfolio optimization
 
 ## Future Implementations
 
-- AI Agents      :  AI hedgefund agents for better evals
-- More API       :  more diverse crypto markets so more coins can be analyzed
-- Crypto         :  develop more advanced valuation metrics & procedures to analyze crypto assets
-- Advising       :  the final decision summary that goes over the findings and comes up with a final decision
-- PDF            :  an option to export the results of analysis
-- Visuals        :  toogle tabs for each of the tickers analyzed
-- Eval Metrics   :  option for the users to pick how they want their securities analyzed
-- Cmnd Line      :  fix command line functionality
-- Visuals        :  ‘Analysis Complete’ label after successfully rendering the outputs
-- Eval Metrics   :  calculations of crypto market supply to display the correct data
-- Cmnd Line      :  closing the server other way than control + c
-- Chat           :  add ai assistant chat (use grok for API)
-- Process        :  make the process of evaluation more experimental instead of deterministic (focus more on collecting data & mitigating the errors)
+- *AI Agents* - AI hedgefund agents for better evals
+- API* - more diverse crypto markets so more coins can be analyzed
+- *Crypto* - develop more advanced valuation metrics & procedures to analyze crypto assets
+- *Advising* - the final decision summary that goes over the findings and comes up with a final decision
+- *PDF* - an option to export the results of analysis
+- *Visuals* - toogle tabs for each of the tickers analyzed
+- *Eval Metrics* - option for the users to pick how they want their securities analyzed
+- *Cmnd Line* - fix command line functionality
+- *Visuals* - ‘Analysis Complete’ label after successfully rendering the outputs
+- *Eval Metrics* - calculations of crypto market supply to display the correct data
+- *Cmnd Line* - closing the server other way than control + c
+- *Chat* - add ai assistant chat (use grok for API)
+- *Process* - make the process of evaluation more experimental instead of deterministic (focus more on collecting data & mitigating the errors)
 
 
 ## License
