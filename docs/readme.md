@@ -9,8 +9,6 @@
 
 ![website_preview_2](https://github.com/user-attachments/assets/ebf79b0c-6e65-4fd5-95a1-e92082726a55)
 
-*An advanced quantitative analysis platform combining machine learning, forensic accounting, and real-time market monitoring for stocks and cryptocurrencies.*
-
 ## Features
 
 - **Multi-Asset Coverage**: Analyze traditional securities & cryptoassets
